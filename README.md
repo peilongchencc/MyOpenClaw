@@ -11,6 +11,7 @@
     - [设置](#设置)
   - [设定IDENTITY.md](#设定identitymd)
   - [心跳监测机制:](#心跳监测机制)
+  - [Mac 锁屏/合盖后 OpenClaw 是否继续运行？](#mac-锁屏合盖后-openclaw-是否继续运行)
   - [更新openclaw](#更新openclaw)
   - [openclaw gateway status--查看openclaw网关状态](#openclaw-gateway-status--查看openclaw网关状态)
   - [openclaw doctor --repair](#openclaw-doctor---repair)
@@ -110,6 +111,30 @@ openclaw dashboard
 这是 OpenClaw 的自动心跳监测机制，作用是：
 
 检测 Agent 是否存活 — Gateway 定期向 Agent 发送心跳信号，Agent 回复表示"我还在"
+
+## Mac 锁屏/合盖后 OpenClaw 是否继续运行？
+
+日常使用中，下班时通常会按 `Control+Cmd+Q` 锁屏并合上电脑，这里说明一下对 OpenClaw 的影响：
+
+| 操作 | 系统行为 | OpenClaw 状态 | 是否需要重启 |
+| --- | --- | --- | --- |
+| `Control+Cmd+Q` 锁屏 | 仅锁定屏幕，不影响任何进程 | 正常运行 | 不需要 |
+| 合盖（睡眠） | CPU 暂停，内存保留，网络断开 | 进程挂起但不会被杀掉 | 通常不需要 |
+| 合盖后长时间不用 | 系统可能回收内存（极少见） | 进程可能被终止 | 可能需要 |
+
+**结论：** 一般情况下，锁屏+合盖后第二天打开电脑，OpenClaw 进程仍然存在，不需要重新启动。
+
+但需要注意，Mac 睡眠期间**网络连接会断开**。由于 OpenClaw Gateway 使用的是 WebSocket 连接（`ws://127.0.0.1:18789`），唤醒后连接需要重新建立。OpenClaw 内置了心跳重连机制（参考上文[心跳监测机制](#心跳监测机制)），通常会自动恢复。
+
+如果唤醒后发现 OpenClaw 工作异常，可以通过以下方式排查：
+
+```bash
+# 检查进程是否还在
+ps aux | grep openclaw
+
+# 检查 gateway 状态
+openclaw gateway status
+```
 
 ## 更新openclaw
 
