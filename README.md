@@ -3,6 +3,8 @@
 开始养虾🦐
 - [MyOpenClaw](#myopenclaw)
 - [笔者电脑配置](#笔者电脑配置)
+  - [新手上手建议](#新手上手建议)
+- [打开可视化 Dashboard（浏览器访问 http://127.0.0.1:18789）](#打开可视化-dashboard浏览器访问-http12700118789)
   - [更新openclaw](#更新openclaw)
   - [openclaw gateway status--查看openclaw网关状态](#openclaw-gateway-status--查看openclaw网关状态)
   - [openclaw doctor --repair](#openclaw-doctor---repair)
@@ -20,6 +22,26 @@
 | OpenClaw版本 | OpenClaw 2026.4.26 |
 | 系统级Node版本 | v24.15.0 (Homebrew node@24) |
 | NVM的Node版本 | v24.11.1 |
+
+## 新手上手建议
+
+1. 先跑通 openclaw gateway status，确认服务正常。
+
+2. 访问 Dashboard http://127.0.0.1:18789 看看界面，熟悉功能
+
+3. 先装安全技能 Skill-Vetter，再按需安装其他 Skills
+
+4. 配置 USER.md，告诉 Agent 你的技术背景（比如 Python/FastAPI 后端开发），让 AI 更懂你
+
+5. 先单 Agent 用熟，再考虑多 Agent 协作
+
+在 `~/.openclaw/openclaw.json` 中可以配置多个 Agent，并分配不同模型。
+
+# 打开可视化 Dashboard（浏览器访问 http://127.0.0.1:18789）
+
+```bash
+openclaw dashboard
+```
 
 ## 更新openclaw
 
