@@ -10,6 +10,7 @@
     - [代理（AI 智能体区）](#代理ai-智能体区)
     - [设置](#设置)
   - [设定IDENTITY.md](#设定identitymd)
+  - [心跳监测机制:](#心跳监测机制)
   - [更新openclaw](#更新openclaw)
   - [openclaw gateway status--查看openclaw网关状态](#openclaw-gateway-status--查看openclaw网关状态)
   - [openclaw doctor --repair](#openclaw-doctor---repair)
@@ -98,6 +99,17 @@ openclaw dashboard
 1. 为你起名 "ClawClaw"
 2. 叫我 "陈培龙" 就好
 3. 高效直接风格
+
+## 心跳监测机制:
+
+![心跳监测机制](./images/心跳监测机制.png)
+
+- Tool（18:03） — 系统自动发出了 HEARTBEAT_OK
+- ClawClaw（18:03） — Agent 收到心跳后做了响应
+
+这是 OpenClaw 的自动心跳监测机制，作用是：
+
+检测 Agent 是否存活 — Gateway 定期向 Agent 发送心跳信号，Agent 回复表示"我还在"
 
 ## 更新openclaw
 
