@@ -37,6 +37,13 @@
 
 在 `~/.openclaw/openclaw.json` 中可以配置多个 Agent，并分配不同模型。
 
+角色分工建议（混合模型省 40-60% 成本）：
+
+- 路由/编排：Claude Haiku（便宜）
+- 代码：Claude Sonnet / Codex
+- 长文写作：DeepSeek-R1
+- 研究综合：GPT-4.1
+
 # 打开可视化 Dashboard（浏览器访问 http://127.0.0.1:18789）
 
 ```bash
