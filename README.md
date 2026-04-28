@@ -5,6 +5,7 @@
 - [笔者电脑配置](#笔者电脑配置)
   - [新手上手建议](#新手上手建议)
 - [打开可视化 Dashboard（浏览器访问 http://127.0.0.1:18789）](#打开可视化-dashboard浏览器访问-http12700118789)
+  - [设定IDENTITY.md](#设定identitymd)
   - [更新openclaw](#更新openclaw)
   - [openclaw gateway status--查看openclaw网关状态](#openclaw-gateway-status--查看openclaw网关状态)
   - [openclaw doctor --repair](#openclaw-doctor---repair)
@@ -49,6 +50,21 @@
 ```bash
 openclaw dashboard
 ```
+
+就是可视化网页界面，OpenClaw 的 Gateway 服务启动后，会在本地开一个 Web 服务，用浏览器访问就能看到图形界面。
+
+里面大概长这样，有几个主要视图：
+
+Chat：直接在网页里跟 AI 对话
+Agents：管理智能体
+Sessions：历史会话记录
+Config：在线编辑配置文件
+
+## 设定IDENTITY.md 
+
+1. 为你起名 "ClawClaw"
+2. 叫我 "陈培龙" 就好
+3. 高效直接风格
 
 ## 更新openclaw
 
