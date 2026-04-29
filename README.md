@@ -46,10 +46,10 @@
 
 角色分工建议（混合模型省 40-60% 成本）：
 
-- 路由/编排：Claude Haiku（便宜）
-- 代码：Claude Sonnet / Codex
-- 长文写作：DeepSeek-R1
-- 研究综合：GPT-4.1
+- 路由/编排：Claude Haiku 4.5（便宜，响应约 200ms）
+- 代码：Claude Sonnet 4.6 / Gemini 3.1 Pro
+- 长文写作：DeepSeek V4 Pro（支持 1M Token 上下文）
+- 研究综合：GPT-5.4 / Claude Opus 4.6
 
 ## 打开可视化 Dashboard（浏览器访问 http://127.0.0.1:18789）
 
