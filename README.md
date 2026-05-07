@@ -39,4 +39,5 @@
 | [skills_learning_notes.md](skills_learning_notes.md) | Skills 概念、原理、演化、趋势 | 想理解 Skills 底层机制的人 |
 | [skills_practical_guide.md](skills_practical_guide.md) | Skills 实战：创建、配置、验证（覆盖三个工具） | 想动手写 Skill 的人 |
 | [openclaw_skills_bilingual.md](openclaw_skills_bilingual.md) | OpenClaw Skills 官方文档（中英对照） | 需要查阅 OpenClaw 官方参考 |
+| [agents_skills_tools_explained.md](agents_skills_tools_explained.md) | Agents、Skills、Tools 概念辨析与关系详解 | 分不清 Agent/Skill/Tool 关系的人 |
 | [claude_code_skills_bilingual.md](claude_code_skills_bilingual.md) | Claude Code Skills 官方文档（中英对照） | 需要查阅 Claude Code 官方参考 |
