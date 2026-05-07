@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/peilongchencc/.claude/**)",
+      "Skill(update-config)",
+      "Bash(git config *)",
+      "Bash(git status*)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git remote *)"
+    ]
+  }
+}
